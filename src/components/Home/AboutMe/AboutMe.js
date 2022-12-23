@@ -10,13 +10,13 @@ const AboutMe = () => {
                             <div>
                                 <p className="font-bold text-blue-500 pb-4">About Me</p>
                             </div>
-                           
+
                             <p className="text-gray-700 text-base md:text-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.</p>
                         </div>
                         <div className="flex flex-wrap text-center font-semibold gap-2 ">
                             <a
-                                href="https://github.com/JilluRahmanJibon/my-sister-portfolio/raw/main/src/Assests/AfiaNasrin.pdf"
-                                class="bg-blue-400 text-white rounded w-28 py-2  hover:bg-blue-500 transition-all"
+                                href="https://drive.google.com/uc?id=1MlOv761_8b_sBKL5LAcKfmghEPq_iR7y&authuser=0&export=download"
+                                className="bg-blue-400 text-white rounded w-28 py-2  hover:bg-blue-500 transition-all"
                                 aria-label="Get Resume"
                                 title="Get Resume"
                             >
@@ -24,7 +24,7 @@ const AboutMe = () => {
                             </a>
                             <a
                                 href="#MySkills"
-                                class="border-2 border-blue-400 text-black rounded hover:bg-blue-500 transition-all w-28 py-2"
+                                className="border-2 border-blue-400 text-black rounded hover:bg-blue-500 transition-all w-28 py-2"
                                 aria-label="My Skills"
                                 title="My Skills"
                             >
@@ -33,10 +33,10 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center lg:w-1/2">
-                            <img className="max-h-96 w-96 p-1 border-blue-500 border-2  rounded-xl object-cover" src="https://kitwind.io/assets/kometa/one-girl-phone.png" alt="" />
+                        <img className="max-h-96 w-96 p-1 border-blue-500 border-2  rounded-xl object-cover" src="https://kitwind.io/assets/kometa/one-girl-phone.png" alt="" />
                     </div>
                 </div>
-                 
+
             </div>
         </section>
     );

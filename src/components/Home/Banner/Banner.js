@@ -12,6 +12,7 @@ const Banner = () => {
                         'Aifa Nasrin', // Deletes 'One' and types 'Two'
                         3000, // Waits 2s
                         'Two Three', // Types 'Three' without deleting 'Two'
+                        4000,
                         () => {
                             console.log('Done typing!'); // Place optional callbacks anywhere in the array
                         }
@@ -26,7 +27,7 @@ const Banner = () => {
                 <div className="flex flex-wrap text-center gap-2 justify-center">
                     <a
                         href="https://github.com/JilluRahmanJibon/my-sister-portfolio/raw/main/src/Assests/AfiaNasrin.pdf"
-                        class="bg-blue-400 text-white rounded w-28 py-2 hover:bg-blue-500 transition-all"
+                        className="bg-blue-400 text-white rounded w-28 py-2 hover:bg-blue-500 transition-all"
                         aria-label="Get Resume"
                         title="Get Resume"
                     >
@@ -34,7 +35,7 @@ const Banner = () => {
                     </a>
                     <a
                         href="#AboutMe"
-                        class="border-2 border-blue-400 text-black rounded hover:bg-blue-500 transition-all w-28 py-2"
+                        className="border-2 border-blue-400 text-black rounded hover:bg-blue-500 transition-all w-28 py-2"
                         aria-label="About Me"
                         title="About Me"
                     >
