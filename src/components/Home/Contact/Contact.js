@@ -1,7 +1,30 @@
-import React from 'react';
+import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from 'react';
 
 const Contact = () => {
-
+    const form = useRef();
+    const [done, setDone] = useState(false);
+    const sendEmail = (e) => {
+        e.preventDefault();
+        console.log(e.target.value);
+        emailjs
+            .sendForm(
+                "service_fw1aj2r",
+                "template_h866lwi",
+                form.current,
+                "w1lyvILBFbG3awpdD"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    setDone(true);
+                    e.target.reset();
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+    };
     return (
         <section id='Contact pt-16 '>
             <div className="py-6 ">
@@ -32,22 +55,22 @@ const Contact = () => {
                             </p>
                         </div>
                     </div>
-                    <form
+                    <form ref={form} onSubmit={sendEmail}
                         className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid">
                         <label className="block">
                             <span className="mb-1">Full Name</span>
-                            <input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-blue-400 border pl-2 py-2 border-blue-500 " required />
+                            <input type="text" name="user_name" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-blue-400 border pl-2 py-2 border-blue-500 " required />
                         </label>
                         <label className="block">
                             <span className="mb-1">Email Address</span>
-                            <input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 pl-2 py-2 focus:ring-blue-400 border border-blue-500 " required data-temp-mail-org="0" />
+                            <input type="email" name="user_email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 pl-2 py-2 focus:ring-blue-400 border border-blue-500 " required data-temp-mail-org="0" />
                         </label>
                         <label className="block">
                             <span className="mb-1">Message</span>
-                            <textarea rows="3" className="block w-full pl-2 rounded-md focus:ring focus:ring-opacity-75 focus:ring-blue-400 border border-blue-500 " placeholder='Input Your message...' required></textarea>
+                            <textarea rows="3" name="message" className="block w-full pl-2 rounded-md focus:ring focus:ring-opacity-75 focus:ring-blue-400 border border-blue-500 " placeholder='Input Your message...' required></textarea>
                         </label>
                         <button className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-blue-400 dark:text-gray-900 focus:ring-blue-400 hover:ring-blue-400">Submit</button>
-
+                        <span className="text1">{done && "Thanks for Contacting me"}</span>
                     </form>
                 </div>
             </div>
