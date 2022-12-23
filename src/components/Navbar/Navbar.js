@@ -1,87 +1,79 @@
-import { useState } from "react";
-
-  const Navbar = () => {
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from '../../Assests/logo.png'
+import Resume from '../../Assests/AfiaNasrin.pdf'
+const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const menuItems = <React.Fragment>
+        <li>
+            <a
+                href="/"
+                aria-label="Our product"
+                title="Our product"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+            >
+                Product
+            </a>
+        </li>
+        <li>
+            <a
+                href="/"
+                aria-label="Our product"
+                title="Our product"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+            >
+                Features
+            </a>
+        </li>
+        <li>
+            <a
+                href="/"
+                aria-label="Product pricing"
+                title="Product pricing"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+            >
+                Pricing
+            </a>
+        </li>
+        <li>
+            <a
+                href="/"
+                aria-label="About us"
+                title="About us"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+            >
+                About us
+            </a>
+        </li>
+        <li>
+            <a
+                href={Resume}
+                class="bg-blue-400 text-white rounded p-3"
+                aria-label="Get Resume"
+                title="Get Resume"
+            >
+                Get Resume
+            </a>
+          
+        </li>
+    </React.Fragment>
     return (
-        <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class=" ">
             <div class="relative flex items-center justify-between">
-                <a
-                    href="/"
-                    aria-label="Company"
-                    title="Company"
+                <Link
+                    to="/"
+                    aria-label="Afia.Nasrin"
+                    title="Afia.Nasrin"
                     class="inline-flex items-center"
                 >
-                    <svg
-                        class="w-8 text-deep-purple-accent-400"
-                        viewBox="0 0 24 24"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeMiterlimit="10"
-                        stroke="currentColor"
-                        fill="none"
-                    >
-                        <rect x="3" y="1" width="7" height="12" />
-                        <rect x="3" y="17" width="7" height="6" />
-                        <rect x="14" y="1" width="7" height="6" />
-                        <rect x="14" y="11" width="7" height="12" />
-                    </svg>
+                    <img className="w-10 " src={logo} alt="" />
                     <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
+                        Afia.Nasrin
                     </span>
-                </a>
+                </Link>
                 <ul class="flex items-center hidden space-x-8 lg:flex">
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            Product
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            Features
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Product pricing"
-                            title="Product pricing"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            Pricing
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="About us"
-                            title="About us"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            About us
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                        >
-                            Sign up
-                        </a>
-                    </li>
+                    {menuItems}
                 </ul>
                 <div class="lg:hidden">
                     <button
@@ -112,8 +104,8 @@ import { useState } from "react";
                                     <div>
                                         <a
                                             href="/"
-                                            aria-label="Company"
-                                            title="Company"
+                                            aria-label="Afia.Nasrin"
+                                            title="Afia.Nasrin"
                                             class="inline-flex items-center"
                                         >
                                             <svg
@@ -132,7 +124,7 @@ import { useState } from "react";
                                                 <rect x="14" y="11" width="7" height="12" />
                                             </svg>
                                             <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                Company
+                                                Afia.Nasrin
                                             </span>
                                         </a>
                                     </div>
@@ -154,56 +146,7 @@ import { useState } from "react";
                                 </div>
                                 <nav>
                                     <ul class="space-y-4">
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Our product"
-                                                title="Our product"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                Product
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Our product"
-                                                title="Our product"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                Features
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Product pricing"
-                                                title="Product pricing"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                Pricing
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="About us"
-                                                title="About us"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                About us
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                                                aria-label="Sign up"
-                                                title="Sign up"
-                                            >
-                                                Sign up
-                                            </a>
-                                        </li>
+                                        {menuItems}
                                     </ul>
                                 </nav>
                             </div>
