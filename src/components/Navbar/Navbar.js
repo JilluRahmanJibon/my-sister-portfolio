@@ -48,14 +48,14 @@ const Navbar = () => {
         </li>
         <li>
             <a
-                href={Resume}
+                href="https://github.com/JilluRahmanJibon/my-sister-portfolio/raw/main/src/Assests/AfiaNasrin.pdf"
                 class="bg-blue-400 text-white rounded p-3"
                 aria-label="Get Resume"
                 title="Get Resume"
             >
                 Get Resume
             </a>
-          
+
         </li>
     </React.Fragment>
     return (
