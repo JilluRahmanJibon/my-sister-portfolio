@@ -1,4 +1,5 @@
-import React from 'react'
+import Aos from 'aos';
+import React, { useEffect } from 'react'
 
 const MySkills = () => {
     const webSkills = [
@@ -10,6 +11,9 @@ const MySkills = () => {
         { width: 'w-[40%]', percentage: '40%', name: 'EXPRESS.JS' },
         { width: 'w-[30%]', percentage: '30%', name: 'MONGODB' },
     ]
+    useEffect(() => {
+        Aos.init();
+    }, []);
     return (
         <div id='MySkills' className='pt-8'>
             <div className='my-5'>
@@ -18,7 +22,8 @@ const MySkills = () => {
                     {
                         webSkills.map((skill, idx) => <div key={idx} className='bg-gray-50 border  sm:px-4 px-2 rounded-md'>
                             <h1 className="  sm:pt-5 pt-5 flex justify-between items-center pb-2 "><span className='font-bold text-xl '>{skill?.name}</span> <span className="bg-blue-500 rounded-md text-white font-bold text-md  sm:px-4 px-2 py-2">{skill?.percentage}</span></h1>
-                            <div className="mt-2 h-3  relative overflow-hidden">
+                            <div data-aos="zoom-in"
+                                className="mt-2 h-3  relative overflow-hidden">
                                 <div className={`h-full  bg-blue-500 rounded-full absolute ${skill?.width}`} ></div>
                             </div>
                         </div>)

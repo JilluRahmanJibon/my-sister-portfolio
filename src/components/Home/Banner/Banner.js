@@ -7,11 +7,11 @@ const Banner = () => {
             <div className="flex justify-center h-screen flex-col text-center items-center ">
                 <h1 className="font-bold text-blue-400 leading-none lg:text-5xl md:text-4xl sm:text-3xl text-2xl ">  <TypeAnimation
                     sequence={[
-                        'Afia', // Types 'One'
-                        2000, // Waits 1s
-                        'Aifa Nasrin', // Deletes 'One' and types 'Two'
-                        3000, // Waits 2s
-                        'Two Three', // Types 'Three' without deleting 'Two'
+                        'Afia', 
+                        2000, 
+                        'Aifa Nasrin',
+                        3000, 
+                        'Two Three',
                         4000,
                         () => {
                             console.log('Done typing!'); // Place optional callbacks anywhere in the array
